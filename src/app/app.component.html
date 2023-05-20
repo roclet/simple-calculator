@@ -1,68 +1,75 @@
-<div class="container">
-  <div class="jumbotron col-sm-4 p-2 m-0 bg-inverse">
-    <h1 class="text-center logo">
-      <img
-        src="https://www.equalexperts.com/wp-content/themes/equalexperts/assets/logo.svg"
-        alt="[=] Equal Experts"
-      />
-    </h1>
-    <div class="input-group input-group-sm col-sm-12 m-0 p-0">
-      <div class="col-sm-12 form-control text-lg-right" type="text">
-        {{ digitEnter }}
+
+
+<div class="content" role="main">
+  <span>{{ title }} app is running!</span>
+  <div class="container">
+    <div class="jumbotron col-sm-4 p-2 m-0 bg-inverse">
+      <h1 class="text-center logo">
+        <img
+          src="https://www.equalexperts.com/wp-content/themes/equalexperts/assets/logo.svg"
+          alt="[=] Equal Experts"
+        />
+      </h1>
+      <div class="input-group input-group-sm col-sm-12 m-0 p-0">
+        <div class="col-sm-12 form-control text-lg-right" type="text">
+          {{ digitEnter }}
+        </div>
+      </div>
+      <div class="input-group input-group-sm col-sm-12 m-0 p-0">
+        <div class="form-control text-sm-right" type="text">{{ restotal }}</div>
+      </div>
+      <div class="col-sm-12 p-1 m-0">
+        <button
+          *ngFor="let top of topBar"
+          class="btn btn-info col-sm-4"
+          type="button"
+          (click)="getoperator(top)"
+        >
+          {{ top }}
+        </button>
+      </div>
+      <div class="col-sm-12 p-1 m-0">
+        <button
+          *ngFor="let col1 of columnOne"
+          class="btn btn-lg btn-outline-secondary col-sm-3 p-1"
+          type="button"
+          (click)="pressNum(col1)"
+        >
+          {{ col1 }}
+        </button>
+      </div>
+      <div class="col-sm-12 p-1 m-0">
+        <button
+          *ngFor="let col2 of columnTwo"
+          class="btn btn-lg btn-outline-secondary col-sm-3 p-1"
+          type="button"
+          (click)="pressNum(col2)"
+        >
+          {{ col2 }}
+        </button>
+      </div>
+      <div class="col-sm-12 p-1 m-0">
+        <button
+          *ngFor="let col3 of columnThree"
+          class="btn btn-lg btn-outline-secondary col-sm-3 p-1"
+          type="button"
+          (click)="pressNumber(col3)"
+        >
+          {{ col3 }}
+        </button>
+      </div>
+      <div class="col-sm-12 p-1 m-0">
+        <button *ngFor="let top of bottomBar"
+          class="btn btn-lg btn-outline-secondary col-sm-4 p-1"
+          type="button"
+          (click)="pressNumber(top)"
+        >
+          {{top}}
+        </button>
       </div>
     </div>
-    <div class="input-group input-group-sm col-sm-12 m-0 p-0">
-      <div class="form-control text-sm-right" type="text">{{ restotal }}</div>
-    </div>
-    <div class="col-sm-12 p-1 m-0">
-      <button
-        *ngFor="let top of topBar"
-        class="btn btn-info col-sm-4"
-        type="button"
-        (click)="getoperator(top)"
-      >
-        {{ top }}
-      </button>
-    </div>
-    <div class="col-sm-12 p-1 m-0">
-      <button
-        *ngFor="let col1 of columnOne"
-        class="btn btn-lg btn-outline-secondary col-sm-3 p-1"
-        type="button"
-        (click)="pressNum(col1)"
-      >
-        {{ col1 }}
-      </button>
-    </div>
-    <div class="col-sm-12 p-1 m-0">
-      <button
-        *ngFor="let col2 of columnTwo"
-        class="btn btn-lg btn-outline-secondary col-sm-3 p-1"
-        type="button"
-        (click)="pressNum(col2)"
-      >
-        {{ col2 }}
-      </button>
-    </div>
-    <div class="col-sm-12 p-1 m-0">
-      <button
-        *ngFor="let col3 of columnThree"
-        class="btn btn-lg btn-outline-secondary col-sm-3 p-1"
-        type="button"
-        (click)="pressNumber(col3)"
-      >
-        {{ col3 }}
-      </button>
-    </div>
-    <div class="col-sm-12 p-1 m-0">
-      <button *ngFor="let top of bottomBar"
-        class="btn btn-lg btn-outline-secondary col-sm-4 p-1"
-        type="button"
-        (click)="pressNumber(top)"
-      >
-        {{top}}
-      </button>
-    </div>
   </div>
+  <br />
+  
 </div>
-<br />
+

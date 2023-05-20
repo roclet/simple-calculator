@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
-import {
-  BOTTOMBARCALCULATOR,
-  DIGITALCOLUMNONE,
-  DIGITALCOLUMNTHREE,
-  DIGITALCOLUMNTWO,
-  TOPBARCALCULATOR,
-} from './common/general.const';
+import { TOPBARCALCULATOR, DIGITALCOLUMNONE, DIGITALCOLUMNTWO, DIGITALCOLUMNTHREE, BOTTOMBARCALCULATOR } from './common/general.const';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'simple-calculator';
+
   topBar = TOPBARCALCULATOR;
   columnOne = DIGITALCOLUMNONE;
   columnTwo = DIGITALCOLUMNTWO;
@@ -40,9 +36,11 @@ export class AppComponent {
   }
   pressNum(num: string) {
     //Do Not Allow . more than once
+    console.log(this.digitEnter,"num xxxxxxxxxxx", num);
     if (num == '.') {
       if (this.digitEnter != '') {
         const lastNum = this.getLastOperand();
+        console.log("lastNum xxxxxxxxxxx", lastNum);
         console.log(lastNum.lastIndexOf('.'));
         if (lastNum.lastIndexOf('.') >= 0) return;
       }
@@ -66,12 +64,14 @@ export class AppComponent {
     }
 
     this.digitEnter = this.digitEnter + num;
+    console.log("this.digitEnter xxxxxxxxxxx", this.digitEnter);
     this.calcAnswer();
   }
 
   getLastOperand() {
     let pos: number;
     pos = this.digitEnter.toString().lastIndexOf('+');
+    console.log("pos", pos);
     if (this.digitEnter.toString().lastIndexOf('-') > pos)
       pos = this.digitEnter.lastIndexOf('-');
     if (this.digitEnter.toString().lastIndexOf('*') > pos)
@@ -113,6 +113,7 @@ export class AppComponent {
 
   calcAnswer() {
     let formula = this.digitEnter;
+    console.log("formula xxxxxxxxxxx", formula);
     let lastKey = formula[formula.length - 1];
     if (lastKey === '.') {
       formula = formula.substring(0, formula.length - 1);
@@ -130,6 +131,7 @@ export class AppComponent {
     }
 
     this.restotal = eval(formula);
+    console.log("this.restotal xxxxxxxxxxx", this.restotal);
   }
 
   displayAnswer() {
