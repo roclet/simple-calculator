@@ -26,3 +26,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 ## ng test --code-coverage 
+
+Instructions
+----------
+1. Install nodejs
+2. npm install -g @angular/cli
+3. Run It : ng serve --open  
