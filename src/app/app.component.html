@@ -1,8 +1,7 @@
-
-
 <div class="content" role="main">
-  <span>{{ title }} app is running!</span>
   <div class="container">
+    <h1 class="p-title">{{ title }} </h1>
+    <hr/>
     <div class="jumbotron col-sm-4 p-2 m-0 bg-inverse">
       <h1 class="text-center logo">
         <img
@@ -59,17 +58,16 @@
         </button>
       </div>
       <div class="col-sm-12 p-1 m-0">
-        <button *ngFor="let top of bottomBar"
+        <button
+          *ngFor="let top of bottomBar"
           class="btn btn-lg btn-outline-secondary col-sm-4 p-1"
           type="button"
           (click)="pressNumber(top)"
         >
-          {{top}}
+          {{ top }}
         </button>
       </div>
     </div>
   </div>
   <br />
-  
 </div>
-

@@ -13,7 +13,7 @@ import {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'simple-calculator';
+  title = 'Simple Calculator';
 
   topBar = TOPBARCALCULATOR;
   columnOne = DIGITALCOLUMNONE;

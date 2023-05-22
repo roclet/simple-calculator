@@ -1,15 +1,15 @@
-.logo{
-    background-color:#1795d4;
+.logo {
+  background-color: #1795d4;
 }
-.bg-inverse{
-    background-color:#001b35;
+.bg-inverse {
+  background-color: #001b35;
 }
 
 .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
-  }
+  display: flex;
+  margin: 82px auto 32px;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+}
